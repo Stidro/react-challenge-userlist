@@ -84,7 +84,7 @@ export default class Table extends Component {
     return (
       <tr className="emptyData">
         <td colSpan={this.props.columns.length}>
-          {this.props.placeholder || 'No available data'}
+          { this.props.placeholder }
         </td>
       </tr>
     );
@@ -160,5 +160,6 @@ Table.propTypes = {
 
 Table.defaultProps = {
   data: [],
-  columns: []
+  columns: [],
+  placeholder: 'No available data'
 };
