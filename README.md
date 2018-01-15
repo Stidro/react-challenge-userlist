@@ -2,6 +2,7 @@
 
 Made with:
 * [React](https://reactjs.org).
+* [Axios](https://github.com/axios/axios).
 
 ## Getting started
 
