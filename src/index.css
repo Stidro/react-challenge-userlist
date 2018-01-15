@@ -3,3 +3,58 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.username {
+  display: flex;
+  align-items: center;
+}
+
+.username img {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;  
+  margin: 5px;
+}
+
+table thead {
+  background: #00b09b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #96c93d, #00b09b);
+  background: linear-gradient(to right, #96c93d, #00b09b); 
+}
+
+table thead th {
+  color: #fff;
+}
+
+tbody tr {
+  color: #808080;
+}
+
+tbody tr:nth-child(even) {
+  background: #f5f5f5;
+}
+
+@media screen and (max-width: 640px) {
+  .username {
+    display: inline-flex;
+  }
+
+  table tbody tr td:first-child {
+      background: #00b09b;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #96c93d, #00b09b);
+      background: linear-gradient(to right, #96c93d, #00b09b); 
+      color: #fff;
+  }
+
+  table tbody tr td:first-child a {
+      color: #fff;
+  }
+
+  table tbody tr td:first-child:before {
+      color: #fff;
+  }
+
+  table tbody td:before {
+      color: #555;
+  }
+}
