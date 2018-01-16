@@ -104,18 +104,21 @@ export default class Table extends Component {
   }
 
   render() {
+    const { data, className } = this.props;
     return (
-      <table>
-        <thead>
-          {this.renderTableTitle()}
-          <tr>{this.renderHeaders()}</tr>
-        </thead>
-        <tbody>
-          {this.props.data.length > 0
-            ? this.renderItems()
-            : this.renderEmptyPlaceholder()}
-        </tbody>
-      </table>
+      <div className={`jc-table ${className}`}>
+        <table>
+          <thead>
+            {this.renderTableTitle()}
+            <tr>{this.renderHeaders()}</tr>
+          </thead>
+          <tbody>
+            {data.length > 0
+              ? this.renderItems()
+              : this.renderEmptyPlaceholder()}
+          </tbody>
+        </table>
+      </div>
     );
   }
 }
@@ -155,11 +158,16 @@ Table.propTypes = {
   /**
    * Text to display when no data is available
    */
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  /**
+   * Style class or classes
+   */
+  className: PropTypes.string
 };
 
 Table.defaultProps = {
   data: [],
   columns: [],
-  placeholder: 'No available data'
+  placeholder: 'No available data',
+  className: ''
 };

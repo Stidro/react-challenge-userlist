@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import Table from './components/Table';
+import './app.css';
 
 class App extends Component {
   constructor(props) {
@@ -71,13 +72,16 @@ class App extends Component {
       <div>
         <h1>React Challenge: Reusable Table</h1>
         <p>Author: Josue Comoto</p>
-        <Table
-          title="User list"
-          columns={columns}
-          data={this.state.users}
-          placeholder="No users registered yet"
-          keyExtractor={item => item.id}
-        />
+        <div className="table-container">
+          <Table
+            className="userlist"
+            title="User list"
+            columns={columns}
+            data={this.state.users}
+            placeholder="No users registered yet"
+            keyExtractor={item => item.id}
+          />
+        </div>
       </div>
     );
   }

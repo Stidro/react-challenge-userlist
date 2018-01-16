@@ -1,0 +1,72 @@
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+.userlist .username {
+  display: flex;
+  align-items: center;
+}
+
+.userlist .username img {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;  
+  margin: 5px;
+}
+
+.userlist table thead {
+  background: #00b09b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #96c93d, #00b09b);
+  background: linear-gradient(to right, #96c93d, #00b09b); 
+}
+
+.userlist table thead th {
+  color: #fff;
+}
+
+.userlist tbody tr {
+  color: #808080;
+}
+
+.userlist tbody tr:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.userlist tbody td a {
+    text-decoration: none;
+    color: #1abc9c;
+}
+
+.userlist tbody td a:hover {
+    color: #12806a;
+}
+
+.userlist tbody td a:visited {
+    color: #16a085;
+}
+
+@media screen and (max-width: 640px) {
+  .userlist .username {
+    display: inline-flex;
+  }
+
+  .userlist table tbody tr td:first-child {
+      background: #00b09b;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #96c93d, #00b09b);
+      background: linear-gradient(to right, #96c93d, #00b09b); 
+      color: #fff;
+  }
+
+  .userlist table tbody tr td:first-child a {
+      color: #fff;
+  }
+
+  .userlist table tbody tr td:first-child:before {
+      color: #fff;
+  }
+
+  .userlist table tbody td:before {
+      color: #555;
+  }
+}
